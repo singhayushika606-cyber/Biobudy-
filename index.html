@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>BioBuddy - Your Biology Friend</title>
+<style>
+body{font-family:Arial;text-align:center;background:#e8f5e9;padding:20px}
+h1{color:#2e7d32}
+.box{background:white;padding:20px;border-radius:15px;max-width:400px;margin:auto;box-shadow:0 0 10px #aaa}
+button{background:#2e7d32;color:white;padding:10px 20px;border:none;border-radius:10px;font-size:16px}
+input{padding:10px;width:80%;border-radius:10px;border:1px solid #aaa}
+</style>
+</head>
+<body>
+<h1>🌿 BioBuddy</h1>
+<p>Your Biology Learning Friend</p>
+<div class="box">
+<h3>Ask Any Biology Question</h3>
+<input id="q" placeholder="Ex: Photosynthesis kya hai?"><br><br>
+<button onclick="ask()">Ask BioBuddy</button>
+<p id="ans"></p>
+</div>
+<script>
+function ask(){
+let q=document.getElementById("q").value.toLowerCase();
+let ans=document.getElementById("ans");
+if(q.includes("photo")) ans.innerText="Photosynthesis: Plants sunlight se apna khana banate hai. CO2 + Water + Sunlight = Glucose + Oxygen";
+else if(q.includes("cell")) ans.innerText="Cell: Cell humare sharir ki sabse chhoti unit hai. Ise Life ki building block kehte hai.";
+else if(q.includes("dna")) ans.innerText="DNA: DNA me humari saari genetic information hoti hai. Ye Double Helix jaisa hota hai.";
+else ans.innerText="BioBuddy: Ye bahut achha question hai! BioBuddy jald iska answer seekh jayega.";
+}
+</script>
+</body>
+</html>
