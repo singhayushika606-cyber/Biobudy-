@@ -1,36 +1,38 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 <title>BioBuddy</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-body{font-family:Arial;text-align:center;background:#e8f5e9;padding:20px}
+body{font-family:Arial;text-align:center;background:#f0f8ff;padding:20px}
 h1{color:#2e7d32}
-button{background:#2e7d32;color:white;padding:10px 20px;border:none;border-radius:10px}
+button{background:#2e7d32;color:white;padding:10px 20px;border:none;border-radius:10px;font-size:16px}
 input{padding:10px;width:80%;border-radius:10px;border:1px solid #ccc}
-#ans{background:white;padding:15px;margin-top:15px;border-radius:10px}
+#ans{background:white;padding:15px;margin-top:20px;border-radius:10px;text-align:left}
 </style>
 </head>
 <body>
 <h1>🌱 BioBuddy</h1>
-<p>Apna Biology Dost - Kuch bhi pucho!</p>
+<p>Your Biology Friend - Ask Anything!</p>
 <input id="q" placeholder="Ex: What is heart?">
 <br><br>
 <button onclick="ask()">Ask BioBuddy</button>
-<div id="ans">Yaha jawab aayega...</div>
+<div id="ans">Your answer will appear here...</div>
 <script>
 function ask(){
 let q=document.getElementById("q").value.toLowerCase();
 let ans=document.getElementById("ans");
-if(q.includes("heart")) ans.innerText="Dil hamare sharir ka pump hai! Ye khoon ko pure sharir me bhejta hai. Dil ek minute me 72 baar dhadakta hai!";
-else if(q.includes("photo")) ans.innerText="Photosynthesis me paudhe suraj ki roshni, paani aur hawa se apna khana banate hai. Ise paudhon ki rasoi kehte hai!";
-else if(q.includes("dna")) ans.innerText="DNA hamare sharir ka blueprint hai! Isi se pata chalta hai hamari aankhen kaisi hongi!";
-else if(q.includes("cell")) ans.innerText="Cell hamare sharir ki sabse chhoti unit hai! Hamara sharir lakhon cells se bana hai!";
-else if(q.includes("blood")) ans.innerText="Blood hamare sharir me oxygen pahunchata hai! Hamare sharir me 5 litre khoon hota hai!";
-else if(q.includes("brain")) ans.innerText="Brain hamare sharir ka computer hai! Ye sochna, samajhna aur yaad rakhna control karta hai!";
-else if(q.includes("plant")) ans.innerText="Plant suraj ki roshni se apna khana banata hai, isko Photosynthesis kehte hai!";
-else if(q.includes("biology")) ans.innerText="Biology jeevon ki padhai hai! Isme hum paudhe, janwar aur insaan ke baare me seekhte hai!";
-else ans.innerText="BioBuddy: Tumne pucha - "+q+" . Ye Biology ka bahut acha sawal hai!";
+let a="";
+if(q.includes("heart")) a="The heart is a muscular organ that pumps blood to all parts of the body. It beats about 100,000 times a day!";
+else if(q.includes("photo")) a="Photosynthesis is the process by which green plants use sunlight, water and carbon dioxide to make their food and release oxygen.";
+else if(q.includes("dna")) a="DNA is the blueprint of life. It carries all the instructions for how our body grows and works.";
+else if(q.includes("cell")) a="The cell is the smallest unit of life. All living things are made of one or more cells.";
+else if(q.includes("blood")) a="Blood carries oxygen and nutrients to all parts of the body. It has red cells, white cells and platelets.";
+else if(q.includes("brain")) a="The brain is the control centre of the body. It controls our thoughts, memory and all actions.";
+else if(q.includes("plant")) a="Plants are living things that make their own food using sunlight. They give us oxygen to breathe.";
+else if(q.includes("biology")) a="Biology is the study of living things like plants, animals and humans.";
+else a="That is a great Biology question! Ask me about heart, photosynthesis, DNA, cell, blood, brain or plant.";
+ans.innerText=a;
 }
 </script>
 </body>
