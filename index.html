@@ -22,8 +22,15 @@ input{padding:10px;width:80%;border-radius:10px;border:1px solid #aaa}
 <script>
 function ask(){
 let q=document.getElementById("q").value.toLowerCase();
-let ans=document.getElementById("ans");
-if(q.includes("photo")) ans.innerText="Photosynthesis: Plants sunlight se apna khana banate hai. CO2 + Water + Sunlight = Glucose + Oxygen";
+if(q.includes("photo")) ans.innerText="Photosynthesis me paudhe suraj ki roshni se khana banate hai!";
+else if(q.includes("heart")) ans.innerText="Dil hamare sharir ka pump hai! Ye khoon ko pure sharir me bhejta hai, ek minute me 72 baar dhadakta hai!";
+else if(q.includes("dna")) ans.innerText="DNA hamare sharir ka blueprint hai! Isi se pata chalta hai hum kaise dikhenge!";
+else if(q.includes("cell")) ans.innerText="Cell hamare sharir ki sabse chhoti unit hai! Hamara sharir lakhon cells se bana hai!";
+else if(q.includes("blood")) ans.innerText="Blood hamare sharir me oxygen pahunchata hai! Hamare sharir me 5 litre khoon hota hai!";
+else if(q.includes("brain")) ans.innerText="Brain hamare sharir ka computer hai! Ye sochna aur yaad rakhna control karta hai!";
+else if(q.includes("biology")) ans.innerText="Biology jeevon ki padhai hai! Isme paudhe, janwar aur insaan ke baare me seekhte hai!";
+else if(q.includes("plant")) ans.innerText="Plant suraj ki roshni se apna khana banata hai, isko Photosynthesis kehte hai!";
+else ans.innerText="BioBuddy: Ye Biology ka sawal hai! BioBuddy iska jawab jaanta hai - " + q;
 else if(q.includes("cell")) ans.innerText="Cell: Cell humare sharir ki sabse chhoti unit hai. Ise Life ki building block kehte hai.";
 else if(q.includes("dna")) ans.innerText="DNA: DNA me humari saari genetic information hoti hai. Ye Double Helix jaisa hota hai.";
 else ans.innerText="BioBuddy: Ye bahut achha question hai! BioBuddy jald iska answer seekh jayega.";
